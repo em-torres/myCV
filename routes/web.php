@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::livewire('/', 'pages.home')->name('home');
+Route::livewire('/login', 'pages.login')->name('login');
