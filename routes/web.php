@@ -12,4 +12,10 @@
 */
 
 Route::livewire('/', 'pages.home')->name('home');
-Route::livewire('/login', 'pages.login')->name('login');
+
+Route::livewire('/login', 'auth.login')->name('login');
+Route::livewire('/register', 'auth.register')->name('register');
+
+//Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');
