@@ -14,7 +14,10 @@
 Route::livewire('/', 'pages.home')->name('home');
 
 Route::livewire('/login', 'auth.login')->name('login');
+Route::livewire('/logout', 'auth.logout')->name('logout');
 Route::livewire('/register', 'auth.register')->name('register');
+
+Route::livewire('/admin', 'pages.admin.home')->name('admin');
 
 //Auth::routes();
 

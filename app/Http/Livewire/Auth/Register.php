@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Auth;
 
+use App\User;
 use Livewire\Component;
 
 class Register extends Component
@@ -21,7 +22,11 @@ class Register extends Component
             'form.email'    => 'required|email',
             'form.password' => 'required|confirmed'
         ]);
-        dd($this->form);
+
+        $user = User::create($this->form);
+        $user->assignRole('guest');
+
+        return redirect(route('login'));
     }
 
     /* ----- LIVEWIRE states methods ----- */

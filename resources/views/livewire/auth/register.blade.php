@@ -13,15 +13,15 @@
                             <div class="col-md-6">
                                 <input id="name"
                                        type="text"
-                                       class="form-control @error('name') is-invalid @enderror"
+                                       class="form-control @error('form.name') is-invalid @enderror"
                                        name="name"
-                                       value="{{ old('name') }}"
+                                       value="{{ old('form.name') }}"
                                        required
                                        autocomplete="name"
                                        autofocus
                                        wire:model="form.name">
 
-                                @error('name')
+                                @error('form.name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -35,14 +35,14 @@
                             <div class="col-md-6">
                                 <input id="email"
                                        type="email"
-                                       class="form-control @error('email') is-invalid @enderror"
+                                       class="form-control @error('form.email') is-invalid @enderror"
                                        name="email"
-                                       value="{{ old('email') }}"
+                                       value="{{ old('form.email') }}"
                                        required
                                        autocomplete="email"
                                        wire:model="form.email">
 
-                                @error('email')
+                                @error('form.email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -56,13 +56,13 @@
                             <div class="col-md-6">
                                 <input id="password"
                                        type="password"
-                                       class="form-control @error('password') is-invalid @enderror"
+                                       class="form-control @error('form.password') is-invalid @enderror"
                                        name="password"
                                        required
                                        autocomplete="new-password"
                                        wire:model="form.password">
 
-                                @error('password')
+                                @error('form.password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
